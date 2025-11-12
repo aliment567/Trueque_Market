@@ -1,63 +1,107 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tecnología en Desarrollo de Software - 3° Semestre</title>
-    <link rel="stylesheet" href="css/estilos.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <title>Semestre 3</title>
+  <link rel="stylesheet" href="css/estilosSemes.css">
 </head>
+
 <body>
-    <header>
-        <h1>Tecnología en Desarrollo de Software - 3° Semestre</h1>
-        <nav>
-            <a href="index.html">Inicio</a> |
-            <a href="semestre_1.html">Semestre 1</a> |
-            <a href="semestre_2.html">Semestre 2</a> |
-            <a href="semestre_3.html" class="activo">Semestre 3</a>
-        </nav>
-    </header>
 
-    <main>
-        <section id="introduccion">
-            <h2>Proyecto Integrador - 3° Semestre</h2>
-            <p>En este semestre se trabaja la <strong>Gestión y Administración de Bases de Datos</strong>. 
-            Se incluyen los diagramas requeridos y las evidencias del proceso mediante la metodología <strong>Scrum</strong>.</p>
-        </section>
+  <!---menu-->
+  <nav class="navbar navbar-expand-lg" id="menu">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="img/Logo tm.png" height="50" alt=""></a>
 
-        <section id="diagramas">
-            <h2>Diagramas del Proyecto</h2>
-            <p>Aquí se debe incluir el documento PDF con los siguientes diagramas:</p>
-            <ul>
-                <li>Diagrama de Casos de Uso</li>
-                <li>Diagrama de Clases</li>
-                <li>Diagrama de Actividades</li>
-                <li>Diagrama de Estados</li>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="participantes.html">Participantes</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Semestre
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="semestre_1.html">Semestre 1</a></li>
+              <li><a class="dropdown-item" href="#">Semestre 2</a></li>
+              <li><a class="dropdown-item" href="semestre_3.html">Semestre 3</a></li>
+              <li><a class="dropdown-item" href="#">Semestre 4</a></li>
+              <li><a class="dropdown-item" href="#">Semestre 5</a></li>
+              <li><a class="dropdown-item" href="#">Semestre 6</a></li>
             </ul>
-            <p><strong>Enlace al PDF:</strong> <em>(Aquí colocarás el link o archivo del PDF)</em></p>
-        </section>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!---fin menu-->
 
-        <section id="videos">
-            <h2>Evidencias - Metodología Scrum</h2>
-            <p>A continuación se dejarán los espacios para los tres videos que muestran el desarrollo de Scrum durante el proyecto:</p>
-            <ul>
-                <li><strong>Video 1:</strong> <em>(Aquí colocarás el enlace o archivo del video 1)</em></li>
-                <li><strong>Video 2:</strong> <em>(Aquí colocarás el enlace o archivo del video 2)</em></li>
-                <li><strong>Video 3:</strong> <em>(Aquí colocarás el enlace o archivo del video 3)</em></li>
-            </ul>
-        </section>
 
-        <section id="seph">
-            <h2>Video SEPH</h2>
-            <p>Este video también forma parte del contenido del semestre:</p>
-            <!-- Aquí puedes usar el mismo video embebido que está en semestre_1 -->
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID_SEPH" 
-                title="SEPH Video" frameborder="0" allowfullscreen></iframe>
-            <p><em>(Reemplaza “VIDEO_ID_SEPH” con el ID del video que está en semestre 1)</em></p>
-        </section>
-    </main>
+  <!---Contenedor principal-->
+  <div class="contenedor2 mt-2 p-4">
+    <h1>Proyecto Integrador - 3° Semestre</h1>
+    <p>Durante este semestre se enfoca en la <strong>Gestión y Administración de Bases de Datos</strong>, desarrollando los diagramas de modelado, evidencias del trabajo con <strong>Scrum</strong> y documentación del proceso.</p>
+  </div>
 
-    <footer>
-        <p>© 2025 Trueque Market - Proyecto Integrador Semestre 3</p>
-    </footer>
+  <!---Contenedor diagramas-->
+  <div class="contenedor3 mt-2 p-3">
+    <h2>Diagramas del Proyecto</h2>
+    <p>Debes subir el documento PDF que contenga los siguientes diagramas:</p>
+    <ul class="list-unstyled">
+      <li>📘 Diagrama de Casos de Uso</li>
+      <li>📗 Diagrama de Clases</li>
+      <li>📙 Diagrama de Actividades</li>
+      <li>📕 Diagrama de Estados</li>
+    </ul>
+    <p><strong>Enlace al PDF:</strong> <em>(Aquí colocarás el link o archivo del PDF)</em></p>
+  </div>
+
+  <!---Contenedor evidencias Scrum-->
+  <div class="contenedor4 mt-2 p-3">
+    <h2>Evidencias - Metodología Scrum</h2>
+    <p>A continuación, se dejan los espacios para los tres videos correspondientes a las etapas del proceso Scrum:</p>
+    <ul class="list-unstyled">
+      <li>🎬 <strong>Video 1:</strong> <em>(Aquí colocarás el enlace o archivo del video 1)</em></li>
+      <li>🎬 <strong>Video 2:</strong> <em>(Aquí colocarás el enlace o archivo del video 2)</em></li>
+      <li>🎬 <strong>Video 3:</strong> <em>(Aquí colocarás el enlace o archivo del video 3)</em></li>
+    </ul>
+  </div>
+
+  <!---Video SEPH-->
+  <div class="contenedor5 mt-2 p-3">
+    <h2>Video SEPH</h2>
+    <p>Este video hace parte de la continuidad del proyecto:</p>
+    <div class="hijos5">
+      <iframe width="800" height="450" src="https://www.youtube.com/embed/VIDEO_ID_SEPH" title="Video SEPH" frameborder="0" allowfullscreen></iframe>
+      <p><em>(Reemplaza “VIDEO_ID_SEPH” con el ID real del video de Semestre 1)</em></p>
+    </div>
+  </div>
+
+
+  <!-------FOOTER------->
+  <footer>
+    <div class="pie">
+      <div class="hijos"><img src="img/logoUSBBOG.png" alt></div>
+      <div class="hijos">
+        <a href="https://www.usbbog.edu.co/">Universidad San Buenaventura | </a>
+        <div class="hijo">© 2025 Trueque_Market</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </body>
 </html>
