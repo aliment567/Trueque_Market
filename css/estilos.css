@@ -1,135 +1,170 @@
-
-
-
-
+/* 🔧 Reset general */
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+/* 🔸 Tipografía base */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+/* 🔸 Encabezado */
 .header {
-    height: 100px;
+  height: 100px;
 }
 
 .logo {
-    padding: 10px;
-    float: left;
-    width: 10%;
-    position: relative;
-
-
+  padding: 10px;
+  float: left;
+  width: 10%;
+  position: relative;
 }
-.nav-link
-{
-    color: rgb(199, 62, 8);
-}
+
 .logo img {
-    width: 90%;
-
-
+  width: 90%;
 }
 
-.menu {
-    width: 80%;
-    float: left;
-    position: relative;
-    top: 60px;
-    text-align: center;
-
-
+/* 🔸 Menú */
+#menu {
+  background-color: rgba(0, 0, 0, 0.932);
 }
 
-.menu ol li {
-    display: inline-block;
+.nav-link {
+  color: rgb(199, 62, 8);
+  transition: color 0.3s ease;
 }
 
-.menu ol li a {
-    color: rgb(233, 136, 9);
-    text-decoration: none;
-    padding: 7px;
-
-    font-family: Arial, Helvetica, sans-serif;
+.nav-link:hover {
+  color: rgb(81, 9, 250);
 }
 
-
-
-
-/*caja2*/
-.contenedor {/*
-background-image: url(../img/fondo2.png);*/
-
-background-color: black;
-    text-align: center;
-    height: 100vh;
-    color: rgb(233, 136, 9);
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 25px;
-
-
-
+/* 🔸 Contenedor principal */
+.contenedor {
+  background-color: black;
+  text-align: center;
+  height: 100vh;
+  color: rgb(233, 136, 9);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 25px;
 }
 
 .contenedor h1 {
-    top: 60px;
-    position: relative;
-    font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  top: 60px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-p {
-    top: 40px;
-    position: relative;
-    font-family: Arial, Helvetica, sans-serif;
-    color: white;
-    text-align: center;
-    margin-top: 50px;
+.contenedor p {
+  position: relative;
+  top: 40px;
+  margin-top: 50px;
+  color: white;
+  text-align: center;
 }
 
-/*.contenedor img
-{
-    width: 75%;
-    
-}*/
-.info {
-    position: absolute;
-    top: 150px;
-}
-
-/*caja2*/
-
+/* 🔸 Pie de página */
 .pie {
-    margin-top: 20px;
-    height: 110px;
-    display: flex;
-  
+  margin-top: 20px;
+  height: 110px;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.932);
 }
 
 .pie img {
-    height: 70%;
-    width: 60%;
-   
-}
-
-.hijo {
-    margin-bottom: 5px;
-    color: grey;
-
-    font-size: 15px;
-    text-align: center;
-}
-
-.hijos a {
-    text-decoration: none;
-    color: grey;
-    margin: 5px;
-    font-size: 15px;
+  height: 80%;
+  width: 60%;
 }
 
 .hijos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 33.3%;
-    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 33.3%;
+}
+
+.hijos a {
+  text-decoration: none;
+  color: grey;
+  margin: 5px;
+  font-size: 15px;
+}
+
+.hijo {
+  margin-bottom: 5px;
+  color: grey;
+  font-size: 15px;
+  text-align: center;
+}
+
+/* 👥 Tarjetas de Participantes */
+.hijos2 {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(102, 97, 92);
+  width: 260px;
+  height: auto;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 2px 2px 9px 2px rgba(0, 0, 0, 0.53);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+  width: 90%;
+  height: 180px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+.card-body {
+  text-align: center;
+  color: #fff;
+  padding: 10px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: white;
+}
+
+.card-text {
+  color: rgb(240, 240, 240);
+  font-size: 14px;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+/* 🎨 Hover en nombre */
+.card:hover .card-title {
+  color: #e67300;
 }
