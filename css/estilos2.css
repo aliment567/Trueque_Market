@@ -1,18 +1,18 @@
-/* Reset general */
+/* ======= RESET GENERAL ======= */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* Tipografía */
+/* ======= TIPOGRAFÍA Y FONDO ======= */
 body {
   font-family: 'Roboto', sans-serif;
   background-color: #0f0f0f;
   color: #fff;
 }
 
-/* Navbar */
+/* ======= NAVBAR ======= */
 #menu {
   background-color: #111;
 }
@@ -24,11 +24,12 @@ body {
   color: #1e90ff;
 }
 
-/* Hero Header */
+/* ======= HERO PARTICIPANTES ======= */
 .hero-participantes {
   background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('img/hero-bg2.jpg') center/cover no-repeat;
   padding: 100px 20px;
   color: #ff7f50;
+  text-align: center;
 }
 .hero-participantes h1 {
   font-family: 'Montserrat', sans-serif;
@@ -40,23 +41,31 @@ body {
   color: #f0f0f0;
 }
 
-/* Tarjetas de Participantes */
+/* ======= TARJETAS DE PARTICIPANTES ======= */
 .participante-card {
   background: linear-gradient(145deg, #1a1a1a, #222);
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 8px 20px rgba(0,0,0,0.5);
   transition: transform 0.3s, box-shadow 0.3s;
+  margin-bottom: 20px;
 }
 .participante-card:hover {
   transform: translateY(-10px) scale(1.02);
   box-shadow: 0 15px 30px rgba(255,127,80,0.4);
 }
+
+/* ======= IMÁGENES PARTICIPANTES (no recortar caras) ======= */
 .participante-card img {
   width: 100%;
-  height: 250px;
-  object-fit: cover;
+  height: auto;           /* altura automática según la imagen */
+  object-fit: contain;     /* evita cortar la imagen */
+  object-position: center; /* centra la imagen */
+  background-color: #111;  
+  padding: 10px;
 }
+
+/* ======= CUERPO TARJETA ======= */
 .card-body {
   padding: 20px;
   text-align: center;
@@ -76,7 +85,7 @@ body {
   margin-bottom: 15px;
 }
 
-/* Iconos de redes */
+/* ======= ICONOS DE REDES ======= */
 .social-icons a {
   margin: 0 10px;
   color: #ff7f50;
@@ -86,28 +95,4 @@ body {
 .social-icons a:hover {
   color: #1e90ff;
   transform: scale(1.2);
-}
-
-/* Footer */
-footer {
-  background-color: #111;
-  padding: 20px 0;
-  color: #ccc;
-}
-.pie img {
-  height: 80px;
-}
-.pie a {
-  color: #ff7f50;
-  text-decoration: none;
-}
-.pie a:hover {
-  color: #1e90ff;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .hero-participantes h1 { font-size: 2rem; }
-  .hero-participantes p { font-size: 1rem; }
-  .participante-card img { height: 200px; }
 }
