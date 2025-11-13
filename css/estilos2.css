@@ -120,68 +120,64 @@ width: 75%;
 
 }
 
-/* ============================= */
-/* 💼 TARJETAS DE PARTICIPANTES */
-/* ============================= */
-
+/* 🔸 Contenedor de tarjetas */
 .hijos2 {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 30px;
-    padding: 20px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 20px;
 }
 
-/* 🔸 Estilo general de cada tarjeta */
+/* 🔸 Tarjeta individual */
 .card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgb(102, 97, 92);
-    width: 260px;              /* todas las tarjetas del mismo ancho */
-    height: 420px;             /* misma altura total */
-    border: none;
-    border-radius: 15px;
-    box-shadow: 2px 2px 9px 2px rgba(0, 0, 0, 0.53);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(102, 97, 92);
+  width: 260px;
+  height: 420px;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 2px 2px 9px 2px rgba(0, 0, 0, 0.53);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 30px; /* mejora separación en pantallas pequeñas */
 }
 
 .card:hover {
-    transform: scale(1.05);
-    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.6);
+  transform: scale(1.05);
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.6);
 }
 
-/* ============================= */
-/* 📸 IMÁGENES UNIFORMES         */
-/* ============================= */
+/* 🔸 Imagen uniforme */
 .card img {
-    width: 85%;
-    height: 230px;           /* fija la altura exacta (igual para todos) */
-    object-fit: cover;       /* recorta para mantener proporción */
-    object-position: center; /* centra el recorte */
-    border-radius: 10px;
-    margin-top: 15px;
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+  margin-top: 15px;
 }
 
-/* 🔸 Cuerpo del texto en las tarjetas */
+/* 🔸 Cuerpo del texto */
 .card-body {
-    text-align: center;
-    color: #fff;
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 150px;
+  text-align: center;
+  color: #fff;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 150px;
 }
 
 /* 🔸 Nombre */
 .card-title {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 8px;
-    color: white;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: white;
 }
 
 /* 🔸 Rol o descripción */
@@ -191,20 +187,10 @@ width: 75%;
   line-height: 1.4;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-height: 3.5em; /* limita a 2-3 líneas */
-}
-.card img {
-  width: 100%;
-  height: 230px;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 10px;
-}
-.card-text {
   max-height: 3.5em;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
+
+/* 🔸 Hover en nombre */
 .card:hover .card-title {
   color: #ffd700;
 }
