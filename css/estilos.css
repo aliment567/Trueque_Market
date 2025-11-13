@@ -1,170 +1,120 @@
-/* 🔧 Reset general */
+/* Reset */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* 🔸 Tipografía base */
+/* Tipografía */
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #000;
+  font-family: 'Roboto', sans-serif;
+  background-color: #0d0d0d;
   color: #fff;
 }
 
-/* 🔸 Encabezado */
-.header {
-  height: 100px;
+h1, h2, h3, h4 {
+  font-family: 'Montserrat', sans-serif;
 }
 
-.logo {
-  padding: 10px;
-  float: left;
-  width: 10%;
-  position: relative;
-}
-
-.logo img {
-  width: 90%;
-}
-
-/* 🔸 Menú */
+/* Navbar */
 #menu {
-  background-color: rgba(0, 0, 0, 0.932);
+  background: #111;
 }
-
 .nav-link {
-  color: rgb(199, 62, 8);
-  transition: color 0.3s ease;
+  color: #ff7f50;
+  font-weight: 500;
+  transition: 0.3s;
 }
-
 .nav-link:hover {
-  color: rgb(81, 9, 250);
+  color: #1e90ff;
 }
 
-/* 🔸 Contenedor principal */
+/* Hero Section */
 .contenedor {
-  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   height: 100vh;
-  color: rgb(233, 136, 9);
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 25px;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('img/hero-bg.jpg') no-repeat center center/cover;
+  padding: 20px;
 }
-
 .contenedor h1 {
-  position: relative;
-  top: 60px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3rem;
+  color: #ff7f50;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+  transition: transform 0.3s ease;
 }
-
+.contenedor h1:hover {
+  transform: scale(1.05);
+}
 .contenedor p {
-  position: relative;
-  top: 40px;
-  margin-top: 50px;
-  color: white;
-  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #f0f0f0;
 }
 
-/* 🔸 Pie de página */
-.pie {
+.btn-primary {
+  background-color: #1e90ff;
+  border: none;
+  padding: 10px 25px;
+  font-size: 1rem;
+  border-radius: 8px;
+  transition: 0.3s;
   margin-top: 20px;
-  height: 110px;
-  display: flex;
-  background-color: rgba(0, 0, 0, 0.932);
+}
+.btn-primary:hover {
+  background-color: #ff7f50;
+  color: #fff;
+  transform: translateY(-3px);
 }
 
-.pie img {
-  height: 80%;
-  width: 60%;
+/* Footer */
+footer {
+  background-color: #111;
+  padding: 20px 0;
+  color: #ccc;
 }
-
-.hijos {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 33.3%;
-}
-
-.hijos a {
-  text-decoration: none;
-  color: grey;
-  margin: 5px;
-  font-size: 15px;
-}
-
-.hijo {
-  margin-bottom: 5px;
-  color: grey;
-  font-size: 15px;
-  text-align: center;
-}
-
-/* 👥 Tarjetas de Participantes */
-.hijos2 {
-  width: 100%;
+.pie {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: flex-start;
-  gap: 30px;
-  padding: 20px;
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  background-color: rgb(102, 97, 92);
-  width: 260px;
-  height: auto;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 2px 2px 9px 2px rgba(0, 0, 0, 0.53);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin-bottom: 30px;
-  overflow: hidden;
+  gap: 20px;
+}
+.pie img {
+  height: 80px;
+}
+.hijo a {
+  color: #ff7f50;
+  text-decoration: none;
+}
+.hijo a:hover {
+  color: #1e90ff;
 }
 
+/* Cards (participantes, si se agregan luego) */
+.card {
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.7);
 }
-
-.card img {
-  width: 90%;
-  height: 180px;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 10px;
-  margin-top: 15px;
-}
-
-.card-body {
-  text-align: center;
-  color: #fff;
-  padding: 10px 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
 .card-title {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 8px;
-  color: white;
+  color: #ff7f50;
+}
+.card-title:hover {
+  color: #1e90ff;
 }
 
-.card-text {
-  color: rgb(240, 240, 240);
-  font-size: 14px;
-  line-height: 1.4;
-  word-wrap: break-word;
-}
-
-/* 🎨 Hover en nombre */
-.card:hover .card-title {
-  color: #e67300;
+/* Responsive */
+@media (max-width: 768px) {
+  .contenedor h1 { font-size: 2rem; }
+  .contenedor p { font-size: 1rem; }
 }
