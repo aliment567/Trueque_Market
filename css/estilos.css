@@ -11,14 +11,13 @@ body {
   background-color: #0d0d0d;
   color: #fff;
 }
-
 h1, h2, h3, h4 {
   font-family: 'Montserrat', sans-serif;
 }
 
 /* Navbar */
 #menu {
-  background: #111;
+  background-color: #111;
 }
 .nav-link {
   color: #ff7f50;
@@ -55,19 +54,37 @@ h1, h2, h3, h4 {
   color: #f0f0f0;
 }
 
-.btn-primary {
-  background-color: #1e90ff;
-  border: none;
-  padding: 10px 25px;
-  font-size: 1rem;
-  border-radius: 8px;
-  transition: 0.3s;
-  margin-top: 20px;
+/* Sección Acerca del Proyecto */
+.acerca h2 {
+  color: #ff7f50;
 }
-.btn-primary:hover {
-  background-color: #ff7f50;
-  color: #fff;
-  transform: translateY(-3px);
+.icono-beneficio {
+  color: #1e90ff;
+  transition: transform 0.3s, color 0.3s;
+}
+.icono-beneficio:hover {
+  transform: scale(1.2);
+  color: #ff7f50;
+}
+
+/* Sección Cómo Funciona */
+.como-funciona h2 {
+  color: #ff7f50;
+  margin-bottom: 40px;
+}
+.paso {
+  background-color: #1a1a1a;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.paso:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+.numero-paso {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1e90ff;
+  margin-bottom: 10px;
 }
 
 /* Footer */
@@ -94,27 +111,10 @@ footer {
   color: #1e90ff;
 }
 
-/* Cards (participantes, si se agregan luego) */
-.card {
-  background-color: #1a1a1a;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.7);
-}
-.card-title {
-  color: #ff7f50;
-}
-.card-title:hover {
-  color: #1e90ff;
-}
-
 /* Responsive */
 @media (max-width: 768px) {
   .contenedor h1 { font-size: 2rem; }
   .contenedor p { font-size: 1rem; }
+  .paso { margin-bottom: 20px; }
 }
+
