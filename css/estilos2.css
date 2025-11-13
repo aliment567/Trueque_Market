@@ -131,48 +131,44 @@ width: 75%;
   padding: 20px;
 }
 
-/* 🔸 Tarjeta individual */
 .card {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: rgb(102, 97, 92);
   width: 260px;
-  height: 420px;
+  height: auto; /* altura automática para adaptarse al contenido */
   border: none;
   border-radius: 15px;
   box-shadow: 2px 2px 9px 2px rgba(0, 0, 0, 0.53);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin-bottom: 30px; /* mejora separación en pantallas pequeñas */
+  margin-bottom: 30px;
+  overflow: hidden; /* evita que el contenido se salga */
 }
 
 .card:hover {
-  transform: scale(1.05);
-  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.6);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* 🔸 Imagen uniforme */
 .card img {
-  width: 100%;
-  height: 230px;
+  width: 90%;
+  height: 180px; /* más compacto que antes */
   object-fit: cover;
   object-position: center;
   border-radius: 10px;
   margin-top: 15px;
 }
 
-/* 🔸 Cuerpo del texto */
 .card-body {
   text-align: center;
   color: #fff;
-  margin-top: 10px;
+  padding: 10px 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 150px;
 }
 
-/* 🔸 Nombre */
 .card-title {
   font-size: 18px;
   font-weight: bold;
@@ -180,17 +176,14 @@ width: 75%;
   color: white;
 }
 
-/* 🔸 Rol o descripción */
 .card-text {
   color: rgb(240, 240, 240);
   font-size: 14px;
   line-height: 1.4;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-height: 3.5em;
+  word-wrap: break-word;
 }
 
 /* 🔸 Hover en nombre */
 .card:hover .card-title {
-  color: #ffd700;
+  color: #e67300; /* tono cálido, profesional y coherente con tu estilo */
 }
