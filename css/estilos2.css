@@ -120,25 +120,28 @@ width: 75%;
 
 }
 
-/* ==== TARJETAS DE PARTICIPANTES ==== */
-/* ==== TARJETAS DE PARTICIPANTES ==== */
+/* ============================= */
+/* 💼 TARJETAS DE PARTICIPANTES */
+/* ============================= */
+
 .hijos2 {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: flex-start;
     gap: 30px;
     padding: 20px;
 }
 
+/* 🔸 Estilo general de cada tarjeta */
 .card {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
     background-color: rgb(102, 97, 92);
-    width: 260px;
-    height: 420px;
+    width: 260px;              /* todas las tarjetas del mismo ancho */
+    height: 420px;             /* misma altura total */
     border: none;
     border-radius: 15px;
     box-shadow: 2px 2px 9px 2px rgba(0, 0, 0, 0.53);
@@ -151,20 +154,18 @@ width: 75%;
 }
 
 /* ============================= */
-/* 📸 IMÁGENES DE PARTICIPANTES  */
+/* 📸 IMÁGENES UNIFORMES         */
 /* ============================= */
 .card img {
-    width: 85%;               /* hace que todas las imágenes sean del mismo ancho relativo */
-    height: 230px;            /* altura fija para igualar tamaños */
-    object-fit: cover;        /* recorta la imagen sin deformarla */
-    border-radius: 10px;      /* bordes redondeados */
-    margin-top: 15px;         /* pequeño espacio arriba */
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4); /* sombra suave */
+    width: 85%;
+    height: 230px;           /* fija la altura exacta (igual para todos) */
+    object-fit: cover;       /* recorta para mantener proporción */
+    object-position: center; /* centra el recorte */
+    border-radius: 10px;
+    margin-top: 15px;
 }
 
-
-
-/* ==== CONTENIDO ==== */
+/* 🔸 Cuerpo del texto en las tarjetas */
 .card-body {
     text-align: center;
     color: #fff;
@@ -175,6 +176,7 @@ width: 75%;
     height: 150px;
 }
 
+/* 🔸 Nombre */
 .card-title {
     font-size: 18px;
     font-weight: bold;
@@ -182,6 +184,7 @@ width: 75%;
     color: white;
 }
 
+/* 🔸 Rol o descripción */
 .card-text {
     color: rgb(240, 240, 240);
     font-size: 14px;
