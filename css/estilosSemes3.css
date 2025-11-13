@@ -138,3 +138,60 @@ footer {
     align-items: center;
 }
 
+/* ============================= */
+/* 🔸 ESTILO GENERAL DEL BOTÓN 🔸 */
+/* ============================= */
+.btn {
+    background-color: rgb(233, 136, 9); /* color base del botón */
+    color: white;                       /* color del texto */
+    border: none;                       /* sin borde */
+    padding: 10px 20px;                 /* espacio interno (vertical, horizontal) */
+    border-radius: 10px;                /* esquinas redondeadas */
+    transition: all 0.2s ease;          /* transición suave para animaciones */
+    font-weight: bold;                  /* texto en negrita */
+    cursor: pointer;                    /* cambia el cursor al pasar el mouse */
+}
+
+/* ============================= */
+/* 🟠 EFECTO AL PASAR EL MOUSE 🟠 */
+/* ============================= */
+.btn:hover {
+    background-color: rgb(255, 166, 0); /* color más claro al pasar el mouse */
+    transform: scale(1.05);             /* agranda ligeramente el botón */
+}
+
+/* ============================= */
+/* 🔵 EFECTO AL HACER CLIC 🔵 */
+/* ============================= */
+.btn:active {
+    transform: scale(0.95);             /* se encoge un poco simulando que se presiona */
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.4); /* crea sombra interna */
+}
+
+/* ==================================== */
+/* ✨ EFECTO OPCIONAL DE DESTELLO (FLASH) */
+/* ==================================== */
+.btn:active {
+    animation: flash 0.2s ease; /* activa la animación flash al presionar */
+}
+
+@keyframes flash {
+    0% { box-shadow: 0 0 0px rgba(255, 166, 0, 0); }
+    50% { box-shadow: 0 0 15px rgba(255, 166, 0, 0.9); }
+    100% { box-shadow: 0 0 0px rgba(255, 166, 0, 0); }
+}
+
+/* ==================================== */
+/* ✨ EFECTO DE REBOTE (SUAVE OPCIONAL) */
+/* ==================================== */
+/*
+.btn:active {
+    animation: bounce 0.25s ease-in-out;
+}
+
+@keyframes bounce {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.9); }
+    100% { transform: scale(1); }
+}
+*/
