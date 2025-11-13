@@ -101,24 +101,24 @@ footer {
   gap: 5px; /* espacio entre elementos internos */
   padding: 10px;
 }
-/* ======= MATRICES ======= */
-.contenedor6 ul {
-  list-style: none;
-  padding: 0;
-}
+<!-- ======= MATRICES DEL PROYECTO ======= -->
+<section class="contenedor6 mt-4 p-4" data-aos="fade-up">
+  <h2>📊 Matrices del Proyecto</h2>
+  <p>A continuación se muestran las matrices correspondientes al análisis del proyecto:</p>
 
-.contenedor6 li {
-  margin: 10px 0;
-  font-size: 18px;
-}
+  <!-- 🔹 Matriz FODA -->
+  <div class="mt-4 p-3" style="background-color: #f9f9f9; border-radius: 15px; box-shadow: 2px 2px 10px rgba(0,0,0,0.4);">
+    <h4 style="color:#c73e08;">🔹 Matriz FODA</h4>
+    <div class="ratio ratio-16x9">
+      <iframe src="AQUI_PEGA_EL_IFRAME_DEL_EXCEL_FODA" allowfullscreen></iframe>
+    </div>
+  </div>
 
-.contenedor6 a {
-  color: #c73e08;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.contenedor6 a:hover {
-  text-decoration: underline;
-  color: rgb(81, 9, 250);
-}
+  <!-- 🔹 Matriz SMART -->
+  <div class="mt-4 p-3" style="background-color: #f9f9f9; border-radius: 15px; box-shadow: 2px 2px 10px rgba(0,0,0,0.4);">
+    <h4 style="color:#c73e08;">🔹 Matriz SMART</h4>
+    <div class="ratio ratio-16x9">
+      <iframe src="AQUI_PEGA_EL_IFRAME_DEL_EXCEL_SMART" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
