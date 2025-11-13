@@ -150,14 +150,19 @@ width: 75%;
     box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.6);
 }
 
-/* ==== IMAGEN ==== */
+/* ============================= */
+/* 📸 IMÁGENES DE PARTICIPANTES  */
+/* ============================= */
 .card img {
-    width: 85%;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-top: 15px;
+    width: 85%;               /* hace que todas las imágenes sean del mismo ancho relativo */
+    height: 230px;            /* altura fija para igualar tamaños */
+    object-fit: cover;        /* recorta la imagen sin deformarla */
+    border-radius: 10px;      /* bordes redondeados */
+    margin-top: 15px;         /* pequeño espacio arriba */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4); /* sombra suave */
 }
+
+
 
 /* ==== CONTENIDO ==== */
 .card-body {
