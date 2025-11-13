@@ -101,3 +101,24 @@ footer {
   gap: 5px; /* espacio entre elementos internos */
   padding: 10px;
 }
+/* ======= MATRICES ======= */
+.contenedor6 ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contenedor6 li {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.contenedor6 a {
+  color: #c73e08;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.contenedor6 a:hover {
+  text-decoration: underline;
+  color: rgb(81, 9, 250);
+}
