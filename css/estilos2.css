@@ -167,7 +167,10 @@ width: 75%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: auto; /* 🔥 cambio clave: altura automática */
 }
+
+
 
 .card-title {
   font-size: 18px;
@@ -181,9 +184,11 @@ width: 75%;
   font-size: 14px;
   line-height: 1.4;
   word-wrap: break-word;
+  white-space: normal; /* 🔥 asegura que el texto se ajuste */
 }
+
 
 /* 🔸 Hover en nombre */
 .card:hover .card-title {
-  color: #e67300; /* tono cálido, profesional y coherente con tu estilo */
+  color: #cfd8dc; /* gris azulado claro, combina con el fondo gris oscuro */
 }
