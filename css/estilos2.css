@@ -186,8 +186,10 @@ width: 75%;
 
 /* 🔸 Rol o descripción */
 .card-text {
-    color: rgb(240, 240, 240);
-    font-size: 14px;
-    line-height: 1.4;
+  color: rgb(240, 240, 240);
+  font-size: 14px;
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 3.5em; /* limita a 2-3 líneas */
 }
-
