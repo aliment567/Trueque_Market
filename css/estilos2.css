@@ -120,38 +120,54 @@ width: 75%;
 
 }
 
-/* 🔸 Tarjetas de Participantes */
+
+/* 🔸 Contenedor de tarjetas: horizontal y centrado */
+.hijos2 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;     /* 👈 las coloca horizontalmente */
+  justify-content: center; /* 👈 centradas horizontalmente */
+  align-items: stretch;    /* 👈 todas de la misma altura */
+  gap: 25px;               /* 👈 espacio entre tarjetas */
+  flex-wrap: wrap;         /* 👈 si no caben, bajan ordenadamente */
+  padding: 20px;
+}
+
+/* 🔸 Tarjeta general */
 .card {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   background-color: rgb(102, 97, 92);
-  width: 270px; /* un poco más ancha */
+  width: 280px;
   border-radius: 15px;
   box-shadow: 2px 2px 9px 2px rgba(0, 0, 0, 0.53);
   margin: 10px;
   overflow: hidden;
   transition: transform 0.3s ease;
-  min-height: 360px; /* evita que se corte el texto */
+  min-height: 400px; /* 👈 más espacio para el texto */
 }
 
 .card:hover {
   transform: scale(0.97);
 }
 
-/* 🔸 Imágenes */
+/* 🔸 Imagen dentro de la tarjeta */
 .card img {
   width: 100%;
-  height: 200px; /* más altura para que no corte las caras */
-  object-fit: contain; /* 👈 muestra toda la imagen sin recortarla */
-  background-color: #222; /* da un fondo si sobra espacio */
+  height: 200px;
+  object-fit: contain;  /* 👈 muestra toda la imagen sin cortar */
+  object-position: top; /* 👈 sube un poco la imagen */
+  background-color: #222;
   border-bottom: 3px solid rgba(255, 255, 255, 0.2);
 }
 
-/* 🔸 Texto dentro de la tarjeta */
+/* 🔸 Texto de la tarjeta */
 .card-body {
-  padding: 15px;
+  padding: 20px;
   text-align: center;
+  flex-grow: 1; /* 👈 se ajusta al texto */
 }
 
 .card-title {
@@ -164,12 +180,11 @@ width: 75%;
 .card-text {
   font-size: 14px;
   color: rgb(240, 240, 240);
-  line-height: 1.4;
-  word-wrap: break-word;
-  white-space: normal;
+  line-height: 1.5; /* 👈 separa un poco las líneas */
 }
 
-/* 🔸 Hover en el nombre */
+/* 🔸 Hover en nombre */
 .card:hover .card-title {
   color: #cfd8dc;
 }
+
