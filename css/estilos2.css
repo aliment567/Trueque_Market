@@ -1,190 +1,113 @@
+/* Reset general */
 * {
-
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-
-.nav-link {
-    color: rgb(199, 62, 8);
+/* Tipografía */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #0f0f0f;
+  color: #fff;
 }
 
-.nav-link:hover {
-    color: rgb(81, 9, 250);
-}
-
-.header {
-    height: 100px;
-}
-
-.logo {
-    padding: 10px;
-    float: left;
-    width: 10%;
-    position: relative;
-
-
-}
-
-.logo img {
-    width: 100%;
-
-
-}
-
-
-
-/*caja2*/
-.contenedor {
-    /*
-background-image: url(../img/fondo2.png);*/
-
-    height: 600px;
-    text-align: center;
-
-    color: rgb(233, 136, 9);
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 25px;
-
-
-
-}
-
-.contenedor h1 {
-    top: 60px;
-    position: relative;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-p {
-    top: 40px;
-    position: relative;
-    font-family: Arial, Helvetica, sans-serif;
-    color: white;
-    text-align: center;
-    margin-top: 50px;
-}
-
-/*.contenedor img
-{
-width: 75%;
-
-}*/
-.info {
-    position: absolute;
-    top: 150px;
-}
-
-/*caja2*/
-
-.pie {
-    margin-top: 20px;
-    height: 110px;
-    display: flex;
-    background-color: rgba(0, 0, 0, 0.932);
-}
-
-.pie img {
-    height: 80%;
-    width: 60%;
-
-}
-
-.hijo {
-    margin-bottom: 5px;
-    color: grey;
-
-    font-size: 15px;
-    text-align: center;
-}
-
-.hijos a {
-    text-decoration: none;
-    color: grey;
-    margin: 5px;
-    font-size: 15px;
-}
-
+/* Navbar */
 #menu {
-    background-color: rgba(0, 0, 0, 0.932);
+  background-color: #111;
+}
+.nav-link {
+  color: #ff7f50;
+  transition: color 0.3s;
+}
+.nav-link:hover {
+  color: #1e90ff;
 }
 
-.hijos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 33.3%;
-
-
+/* Hero Header */
+.hero-participantes {
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('img/hero-bg2.jpg') center/cover no-repeat;
+  padding: 100px 20px;
+  color: #ff7f50;
+}
+.hero-participantes h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+.hero-participantes p {
+  font-size: 1.2rem;
+  color: #f0f0f0;
 }
 
-
-/* 🔸 Contenedor de tarjetas: horizontal y centrado */
-.hijos2 {
-  width: 100%;
-  display: flex;
-  flex-direction: row;     /* 👈 las coloca horizontalmente */
-  justify-content: center; /* 👈 centradas horizontalmente */
-  align-items: stretch;    /* 👈 todas de la misma altura */
-  gap: 25px;               /* 👈 espacio entre tarjetas */
-  flex-wrap: wrap;         /* 👈 si no caben, bajan ordenadamente */
-  padding: 20px;
-}
-
-/* 🔸 Tarjeta general */
-.card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  background-color: rgb(102, 97, 92);
-  width: 280px;
+/* Tarjetas de Participantes */
+.participante-card {
+  background: linear-gradient(145deg, #1a1a1a, #222);
   border-radius: 15px;
-  box-shadow: 2px 2px 9px 2px rgba(0, 0, 0, 0.53);
-  margin: 10px;
   overflow: hidden;
-  transition: transform 0.3s ease;
-  min-height: 400px; /* 👈 más espacio para el texto */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
-
-.card:hover {
-  transform: scale(0.97);
+.participante-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(255,127,80,0.4);
 }
-
-/* 🔸 Imagen dentro de la tarjeta */
-.card img {
+.participante-card img {
   width: 100%;
-  height: 200px;
-  object-fit: contain;  /* 👈 muestra toda la imagen sin cortar */
-  object-position: top; /* 👈 sube un poco la imagen */
-  background-color: #222;
-  border-bottom: 3px solid rgba(255, 255, 255, 0.2);
+  height: 250px;
+  object-fit: cover;
 }
-
-/* 🔸 Texto de la tarjeta */
 .card-body {
   padding: 20px;
   text-align: center;
-  flex-grow: 1; /* 👈 se ajusta al texto */
 }
-
 .card-title {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
-  margin-bottom: 6px;
-  color: white;
+  color: #ff7f50;
+  margin-bottom: 10px;
 }
-
+.card-title:hover {
+  color: #1e90ff;
+}
 .card-text {
-  font-size: 14px;
-  color: rgb(240, 240, 240);
-  line-height: 1.5; /* 👈 separa un poco las líneas */
+  font-size: 15px;
+  color: #ccc;
+  margin-bottom: 15px;
 }
 
-/* 🔸 Hover en nombre */
-.card:hover .card-title {
-  color: #cfd8dc;
+/* Iconos de redes */
+.social-icons a {
+  margin: 0 10px;
+  color: #ff7f50;
+  font-size: 1.3rem;
+  transition: color 0.3s, transform 0.3s;
+}
+.social-icons a:hover {
+  color: #1e90ff;
+  transform: scale(1.2);
 }
 
+/* Footer */
+footer {
+  background-color: #111;
+  padding: 20px 0;
+  color: #ccc;
+}
+.pie img {
+  height: 80px;
+}
+.pie a {
+  color: #ff7f50;
+  text-decoration: none;
+}
+.pie a:hover {
+  color: #1e90ff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-participantes h1 { font-size: 2rem; }
+  .hero-participantes p { font-size: 1rem; }
+  .participante-card img { height: 200px; }
+}

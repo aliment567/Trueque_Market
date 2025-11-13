@@ -1,99 +1,133 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
-      crossorigin="anonymous">
-    <title>Participantes</title>
-    <link rel="stylesheet" href="css/estilos2.css">
-  </head>
-  <body>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Participantes | Trueque Market</title>
 
-    <!-- 🧭 Menú de navegación -->
-    <nav class="navbar navbar-expand-lg" id="menu">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img src="img/Logo tm.png" height="50" alt=""></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-          data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
-          aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet">
 
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="participantes.html">Participantes</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                Semestre
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="semestre_1.html">Semestre_1</a></li>
-                <li><a class="dropdown-item" href="#">Semestre_2</a></li>
-                <li><a class="dropdown-item" href="semestre_3.html">Semestre_3</a></li>
-                <li><a class="dropdown-item" href="#">Semestre_4</a></li>
-                <li><a class="dropdown-item" href="#">Semestre_5</a></li>
-                <li><a class="dropdown-item" href="#">Semestre_6</a></li>
-              </ul>
-            </li>
-          </ul>
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- AOS Animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="css/estilos2.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg" id="menu">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="img/Logo tm.png" height="50" alt="Logo Trueque Market"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link active" href="participantes.html">Participantes</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">Semestre</a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="semestre_1.html">Semestre 1</a></li>
+              <li><a class="dropdown-item" href="#">Semestre 2</a></li>
+              <li><a class="dropdown-item" href="semestre_3.html">Semestre 3</a></li>
+              <li><a class="dropdown-item" href="#">Semestre 4</a></li>
+              <li><a class="dropdown-item" href="#">Semestre 5</a></li>
+              <li><a class="dropdown-item" href="#">Semestre 6</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header / Título -->
+  <header class="text-center py-5 hero-participantes" data-aos="fade-down">
+    <h1>Conoce a Nuestro Equipo</h1>
+    <p>Profesionales dedicados que hacen posible Trueque Market</p>
+  </header>
+
+  <!-- Tarjetas de Participantes -->
+  <section class="container my-5">
+    <div class="row justify-content-center hijos2">
+
+      <!-- Tarjeta 1 -->
+      <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="card participante-card">
+          <img src="img/BRA.png" alt="Brayan Fontecha">
+          <div class="card-body">
+            <h5 class="card-title">Brayan Fontecha</h5>
+            <p class="card-text">Desarrollador y Programador</p>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
         </div>
       </div>
-    </nav>
 
-<div class="hijos2 mt-2">
-  <!-- Tarjeta 1 -->
-  <div class="card">
-    <img src="img/BRA.png" alt="Brayan Fontecha">
-    <div class="card-body">
-      <h5 class="card-title">Brayan Fontecha</h5>
-      <p class="card-text">Desarrollador y Programador</p>
-    </div>
-  </div>
-
-  <!-- Tarjeta 2 -->
-  <div class="card">
-    <img src="img/Ale.png" alt="Alejandro Gutierrez">
-    <div class="card-body">
-      <h5 class="card-title">Alejandro Gutierrez</h5>
-      <p class="card-text">Gestor de Bases de Datos y Programador</p>
-    </div>
-  </div>
-
-  <!-- Tarjeta 3 -->
-  <div class="card">
-    <img src="img/HER.png" alt="Hernan Rojas">
-    <div class="card-body">
-      <h5 class="card-title">Hernan Rojas</h5>
-      <p class="card-text">Líder de Proyecto y Programador</p>
-    </div>
-  </div>
-</div>
-
-    <!-- 🧭 Footer -->
-    <footer>
-      <div class="pie">
-        <div class="hijos"><img src="img/logoUSBBOG.png" alt=""></div>
-        <div class="hijos">
-          <a href="https://www.usbbog.edu.co/">Universidad San Buenaventura |</a><br>
-          <div class="hijo">© 2024 Trueque_Market</div>
+      <!-- Tarjeta 2 -->
+      <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="card participante-card">
+          <img src="img/Ale.png" alt="Alejandro Gutierrez">
+          <div class="card-body">
+            <h5 class="card-title">Alejandro Gutierrez</h5>
+            <p class="card-text">Gestor de Bases de Datos y Programador</p>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
         </div>
       </div>
-    </footer>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
-      crossorigin="anonymous"></script>
-  </body>
+      <!-- Tarjeta 3 -->
+      <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="card participante-card">
+          <img src="img/HER.png" alt="Hernan Rojas">
+          <div class="card-body">
+            <h5 class="card-title">Hernan Rojas</h5>
+            <p class="card-text">Líder de Proyecto y Programador</p>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="pie d-flex flex-wrap justify-content-center align-items-center py-3">
+      <div class="hijos"><img src="img/logoUSBBOG.png" alt=""></div>
+      <div class="hijos text-center">
+        <a href="https://www.usbbog.edu.co/">Universidad San Buenaventura</a><br>
+        <div class="hijo">© 2024 Trueque Market</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000 });
+  </script>
+</body>
 </html>
