@@ -1,30 +1,154 @@
 <!doctype html>
+<html lang="es">
 
-<!-- INTRO -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Semestre 4 | Trueque Market</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/estilosSemestre4.css">
+</head>
+
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar navbar-expand-lg" id="menu">
+
+  <div class="container-fluid">
+
+    <a class="navbar-brand" href="#">
+      <img src="img/Logo tm.png" height="50" alt="Logo">
+    </a>
+
+    <button class="navbar-toggler" type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
+
+      <span class="navbar-toggler-icon"></span>
+
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+      <ul class="navbar-nav ms-auto">
+
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Inicio</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="participantes.html">Participantes</a>
+        </li>
+
+        <li class="nav-item dropdown">
+
+          <a class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false">
+
+            Semestre
+
+          </a>
+
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+            <li>
+              <a class="dropdown-item" href="semestre_1.html">
+                Semestre 1
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="#">
+                Semestre 2
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="semestre_3.html">
+                Semestre 3
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="semestre_4.html">
+                Semestre 4
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="#">
+                Semestre 5
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="#">
+                Semestre 6
+              </a>
+            </li>
+
+          </ul>
+
+        </li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+</nav>
+
+<!-- ===== INTRO ===== -->
 <section class="contenedor2 mt-4 p-4" data-aos="fade-up">
+
   <h1>Proyecto Integrador - 4° Semestre</h1>
 
   <p>
     Implementación de un sistema automatizado con integración IoT
     para el monitoreo inteligente dentro de Trueque Market.
   </p>
+
 </section>
 
-<!-- VIDEO -->
+<!-- ===== VIDEO ===== -->
 <section class="contenedor3 mt-4 p-4" data-aos="fade-up">
+
   <h2>Video del Sistema</h2>
 
   <div class="ratio ratio-16x9">
+
     <iframe
       src="https://www.youtube.com/embed/_td6rS93xso"
       title="Video IoT"
       allowfullscreen>
     </iframe>
+
   </div>
+
 </section>
 
-<!-- DESCRIPCIÓN -->
+<!-- ===== DESCRIPCIÓN ===== -->
 <section class="contenedor4 mt-4 p-4" data-aos="fade-up">
+
   <h2>Descripción del Sistema IoT</h2>
 
   <p>
@@ -38,25 +162,33 @@
     <li>Automatización de procesos</li>
     <li>Integración con microcontroladores</li>
   </ul>
+
 </section>
 
-<!-- DOCUMENTO -->
+<!-- ===== DOCUMENTO ===== -->
 <section class="contenedor5 mt-4 p-4" data-aos="fade-up">
+
   <h2>Documento Técnico</h2>
 
   <div class="ratio ratio-16x9">
+
     <iframe src="img/documento_semestre4.pdf"></iframe>
+
   </div>
+
 </section>
 
-<!-- FOOTER -->
+<!-- ===== FOOTER ===== -->
 <footer>
+
   <div class="pie">
+
     <div class="hijos">
       <img src="img/logoUSBBOG.png" alt="USB">
     </div>
 
     <div class="hijos text-center">
+
       <a href="https://www.usbbog.edu.co/" target="_blank">
         Universidad San Buenaventura
       </a>
@@ -64,15 +196,23 @@
       <div class="hijo">
         © 2026 Trueque Market
       </div>
+
     </div>
+
   </div>
+
 </footer>
 
+<!-- ===== SCRIPTS ===== -->
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 <script>
-  AOS.init();
+  AOS.init({
+    duration: 1000
+  });
 </script>
 
 </body>
