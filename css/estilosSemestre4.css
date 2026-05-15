@@ -57,7 +57,6 @@ body{
 /* ===== CONTENEDORES ===== */
 .contenedor2,
 .contenedor3,
-.contenedor4,
 .contenedor5{
     width:90%;
     margin:auto;
@@ -71,7 +70,6 @@ body{
 
 .contenedor2:hover,
 .contenedor3:hover,
-.contenedor4:hover,
 .contenedor5:hover{
     transform: translateY(-8px);
     box-shadow: 0 15px 35px rgba(30,144,255,0.25);
