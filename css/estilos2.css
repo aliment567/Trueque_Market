@@ -1,98 +1,420 @@
-/* ======= RESET GENERAL ======= */
-* {
+/* =============================================
+   VARIABLES — Trueque Market · Participantes
+   ============================================= */
+:root {
+  --blue-deep:    #050b18;
+  --blue-mid:     #070f1e;
+  --blue-surface: #0a1426;
+  --blue-card:    #0d1b35;
+  --blue-accent:  #3b82f6;
+  --blue-light:   #7eb8f7;
+  --blue-muted:   #7a9cbf;
+  --blue-dim:     #4a6a8a;
+  --blue-border:  rgba(59, 130, 246, 0.15);
+  --text-white:   #ffffff;
+  --text-body:    #e8edf7;
+  --radius-sm:    6px;
+  --radius-md:    10px;
+  --radius-lg:    14px;
+  --transition:   0.26s ease;
+}
+
+/* =============================================
+   RESET
+   ============================================= */
+*, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* ======= TIPOGRAFÍA Y FONDO ======= */
+/* =============================================
+   BASE
+   ============================================= */
+html { scroll-behavior: smooth; }
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #0f0f0f;
-  color: #fff;
+  background-color: var(--blue-deep);
+  color: var(--text-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
-
-/* ======= NAVBAR ======= */
-#menu {
-  background-color: #111;
-}
-.nav-link {
-  color: #ff7f50;
-  transition: color 0.3s;
-}
-.nav-link:hover {
-  color: #1e90ff;
-}
-
-/* ======= HERO PARTICIPANTES ======= */
-.hero-participantes {
-  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('img/hero-bg2.jpg') center/cover no-repeat;
-  padding: 100px 20px;
-  color: #ff7f50;
-  text-align: center;
-}
-.hero-participantes h1 {
+h1, h2, h3, h4, h5 {
   font-family: 'Montserrat', sans-serif;
-  font-size: 3rem;
-  margin-bottom: 15px;
-}
-.hero-participantes p {
-  font-size: 1.2rem;
-  color: #f0f0f0;
+  letter-spacing: -0.02em;
 }
 
-/* ======= TARJETAS DE PARTICIPANTES ======= */
-.participante-card {
-  background: linear-gradient(145deg, #1a1a1a, #222);
-  border-radius: 15px;
+/* =============================================
+   NAVBAR  (#menu)
+   ============================================= */
+#menu {
+  background-color: rgba(5, 11, 24, 0.96);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--blue-border);
+  position: sticky;
+  top: 0;
+  z-index: 200;
+}
+
+.navbar-brand img {
+  transition: filter var(--transition);
+}
+.navbar-brand img:hover {
+  filter: brightness(1.15) drop-shadow(0 0 8px rgba(59,130,246,0.4));
+}
+
+.navbar-toggler {
+  border-color: rgba(59, 130, 246, 0.35);
+  border-radius: var(--radius-sm);
+  padding: 5px 8px;
+}
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%237eb8f7' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.nav-link {
+  color: var(--blue-light) !important;
+  font-weight: 500;
+  font-size: 0.82rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 6px 12px !important;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  transition: color var(--transition), background-color var(--transition),
+              border-color var(--transition);
+}
+.nav-link:hover,
+.nav-link.active,
+.nav-link:focus {
+  color: var(--text-white) !important;
+  background-color: rgba(59, 130, 246, 0.1);
+  border-color: rgba(59, 130, 246, 0.25);
+}
+
+.dropdown-menu {
+  background-color: #0a1832;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: var(--radius-md);
+  padding: 6px;
+  box-shadow: 0 16px 40px rgba(5, 11, 24, 0.85);
+  margin-top: 6px !important;
+}
+.dropdown-item {
+  color: var(--blue-muted);
+  font-size: 0.85rem;
+  font-weight: 500;
+  border-radius: var(--radius-sm);
+  padding: 7px 14px;
+  transition: background-color var(--transition), color var(--transition);
+}
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: rgba(59, 130, 246, 0.12);
+  color: var(--text-white);
+}
+
+/* =============================================
+   HERO PARTICIPANTES  (.hero-participantes)
+   ============================================= */
+.hero-participantes {
+  background:
+    linear-gradient(155deg, rgba(7,16,31,0.96) 0%, rgba(11,29,64,0.92) 55%, rgba(5,11,24,1) 100%),
+    url('../img/hero-bg2.jpg') no-repeat center center / cover;
+  padding: 90px 20px 72px;
+  text-align: center;
+  border-bottom: 1px solid rgba(59, 130, 246, 0.1);
+  position: relative;
   overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
-  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Glow radial de fondo */
+.hero-participantes::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 560px;
+  height: 440px;
+  background: radial-gradient(ellipse, rgba(59,130,246,0.07) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+/* Línea inferior decorativa */
+.hero-participantes::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(59,130,246,0.35), transparent);
+}
+
+/* Badge animado — agrégalo en el HTML como:
+   <span class="hero-badge"><span class="dot"></span>Equipo 2024</span>
+   (opcional, no rompe nada si no está) */
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.28);
+  color: var(--blue-light);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 5px 16px;
+  border-radius: 999px;
   margin-bottom: 20px;
 }
-.participante-card:hover {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 15px 30px rgba(255,127,80,0.4);
+.hero-badge .dot {
+  width: 6px;
+  height: 6px;
+  background: var(--blue-accent);
+  border-radius: 50%;
+  animation: pulse-dot 2.2s infinite;
+}
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.25; transform: scale(0.6); }
 }
 
-/* ======= IMÁGENES PARTICIPANTES (no recortar caras) ======= */
+/* h1 del header */
+.hero-participantes h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1.9rem, 5vw, 3rem);
+  font-weight: 700;
+  color: var(--text-white);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: 14px;
+}
+
+/* Párrafo del header */
+.hero-participantes p {
+  font-size: 1.05rem;
+  color: var(--blue-muted);
+  line-height: 1.75;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* =============================================
+   TARJETAS DE PARTICIPANTES  (.participante-card)
+   ============================================= */
+.participante-card {
+  background: var(--blue-surface) !important;
+  border: 1px solid rgba(59, 130, 246, 0.12) !important;
+  border-radius: 16px !important;
+  overflow: hidden;
+  box-shadow: none !important;
+  position: relative;
+  transition: transform var(--transition), border-color var(--transition),
+              box-shadow var(--transition);
+}
+
+/* Línea superior animada al hover */
+.participante-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--blue-accent), transparent);
+  opacity: 0;
+  transition: opacity 0.35s;
+  z-index: 1;
+}
+.participante-card:hover::before {
+  opacity: 1;
+}
+.participante-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(59, 130, 246, 0.4) !important;
+  box-shadow: 0 20px 50px rgba(10, 30, 80, 0.65) !important;
+}
+
+/* =============================================
+   IMAGEN DE LA TARJETA
+   ============================================= */
 .participante-card img {
   width: 100%;
-  height: auto;           /* altura automática según la imagen */
-  object-fit: contain;     /* evita cortar la imagen */
-  object-position: center; /* centra la imagen */
-  background-color: #111;  
-  padding: 10px;
+  height: auto;
+  object-fit: contain;
+  object-position: center top;
+  background-color: var(--blue-card);
+  padding: 20px 24px 0;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.participante-card:hover img {
+  transform: scale(1.04);
 }
 
-/* ======= CUERPO TARJETA ======= */
-.card-body {
-  padding: 20px;
+/* =============================================
+   CUERPO DE LA TARJETA  (.card-body)
+   ============================================= */
+.participante-card .card-body {
+  background: var(--blue-surface);
+  padding: 20px 18px 22px;
   text-align: center;
+  border-top: 1px solid rgba(59, 130, 246, 0.1);
 }
-.card-title {
-  font-size: 20px;
-  font-weight: bold;
-  color: #ff7f50;
+
+/* Pill de rol — opcional, agrégalo en el HTML como:
+   <span class="role-badge">Desarrollo</span>
+   antes del h5 */
+.role-badge {
+  display: inline-block;
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.22);
+  color: var(--blue-light);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  padding: 3px 12px;
+  border-radius: 999px;
   margin-bottom: 10px;
 }
-.card-title:hover {
-  color: #1e90ff;
+
+/* Nombre */
+.participante-card .card-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-white);
+  margin-bottom: 6px;
+  letter-spacing: -0.01em;
+  transition: color var(--transition);
 }
-.card-text {
-  font-size: 15px;
-  color: #ccc;
-  margin-bottom: 15px;
+.participante-card .card-title:hover {
+  color: var(--blue-light);
 }
 
-/* ======= ICONOS DE REDES ======= */
+/* Descripción / rol */
+.participante-card .card-text {
+  font-size: 0.85rem;
+  color: var(--blue-dim);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+/* Divisor */
+.participante-card .card-body::before {
+  content: '';
+  display: block;
+  height: 1px;
+  background: rgba(59, 130, 246, 0.1);
+  margin: 0 0 14px;
+}
+
+/* =============================================
+   REDES SOCIALES  (.social-icons)
+   ============================================= */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
 .social-icons a {
-  margin: 0 10px;
-  color: #ff7f50;
-  font-size: 1.3rem;
-  transition: color 0.3s, transform 0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-sm);
+  background: rgba(59, 130, 246, 0.08);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  color: var(--blue-accent);
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: background var(--transition), border-color var(--transition),
+              color var(--transition), transform var(--transition);
 }
 .social-icons a:hover {
-  color: #1e90ff;
-  transform: scale(1.2);
+  background: rgba(59, 130, 246, 0.22);
+  border-color: var(--blue-accent);
+  color: var(--text-white);
+  transform: translateY(-2px) scale(1.1);
+}
+
+/* =============================================
+   SECCIÓN  (.hijos2 — contenedor de tarjetas)
+   ============================================= */
+.hijos2 {
+  gap: 0;
+}
+.hijos2 .col-md-4 {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+/* =============================================
+   FOOTER
+   ============================================= */
+footer {
+  background-color: #030a14;
+  border-top: 1px solid rgba(59, 130, 246, 0.1);
+  color: var(--blue-dim);
+}
+
+.pie {
+  padding: 32px 24px 16px;
+  border-bottom: 1px solid rgba(59, 130, 246, 0.07);
+  gap: 24px !important;
+}
+
+/* Logo USB */
+.pie .hijos img {
+  height: 80px;
+  filter: brightness(0.7) saturate(0.4);
+  transition: filter var(--transition);
+}
+.pie .hijos img:hover {
+  filter: brightness(1) saturate(1);
+}
+
+/* Texto footer */
+.pie .hijos a {
+  color: var(--blue-light);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: color var(--transition);
+}
+.pie .hijos a:hover {
+  color: var(--text-white);
+}
+
+.pie .hijo {
+  font-size: 0.75rem;
+  color: #1e3450;
+  margin-top: 4px;
+  letter-spacing: 0.03em;
+}
+
+/* =============================================
+   RESPONSIVE
+   ============================================= */
+@media (max-width: 992px) {
+  .hijos2 .col-md-4 {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-participantes h1  { font-size: 1.9rem; }
+  .hero-participantes p   { font-size: 0.95rem; }
+  .participante-card      { margin-bottom: 16px; }
+  .social-icons a         { width: 30px; height: 30px; }
+  #menu                   { backdrop-filter: none; }
+}
+
+@media (max-width: 480px) {
+  .hero-participantes { padding: 64px 16px 52px; }
+  .social-icons       { gap: 6px; }
 }
