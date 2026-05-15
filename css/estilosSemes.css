@@ -1,106 +1,114 @@
-*{
-    box-sizing: border-box;
-    margin: 0%;
-    padding: 0%;
-}
-#menu
-{
-    background-color: rgba(0, 0, 0, 0.932);
-}
-
-.nav-link
-{
-    color: rgb(199, 62, 8);
+/* ====== ESTILO GENERAL ====== */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f8fb;
+  color: #333;
+  margin: 0;
+  padding: 0;
 }
 
-
-.btn
-{
-    background-color: blue;
-    color:white ;
-
+/* ====== NAVBAR ====== */
+.navbar-brand img {
+  filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.3));
 }
 
-/*pie*/
-
-.pie {
-    margin-top: 20px;
-    height: 110px;
-    display: flex;
-    background-color: rgba(0, 0, 0, 0.932);
+.navbar {
+  background: linear-gradient(90deg, #003366, #0055a5);
 }
 
-.pie img {
-    height: 70%;
-    width: 60%;
-
+.nav-link {
+  color: #fff !important;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
-.hijo {
-    margin-bottom: 5px;
-    color: grey;
-
-    font-size: 15px;
-    text-align: center;
+.nav-link:hover {
+  color: #ffdd57 !important;
 }
 
-.hijos a {
-    text-decoration: none;
-    color: grey;
-    margin: 5px;
-    font-size: 15px;
+.dropdown-menu {
+  background-color: #0055a5;
+  border-radius: 8px;
 }
-.hijos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 33.3%;
-    
+
+.dropdown-item {
+  color: #fff;
 }
-body
-{
-    background-color: rgba(12, 12, 12, 0.836);
+
+.dropdown-item:hover {
+  background-color: #003366;
+  color: #ffdd57;
 }
-.carousel {
-    max-width: 800px; /* Ajusta el ancho del carrusel */
-    margin: 0 auto; /* Centra el carrusel horizontalmente */
-  
-  }
-  
-  .carousel-item img {
-    height: 500px; /* Ajusta la altura de las imágenes */
-    object-fit: coevr; /* Ajusta la imagen dentro del contenedor */
-  }
-  
-  .btn {
-    margin-top: 1rem;
-    width: auto;
-  }
-  .contenedor2{
-    background-color: white;
-    text-align: center;
-  }
-  .hijos3 img{
-    width: 75%;
-    display: flex;
-    margin: 0 auto; /* Centra el carrusel horizontalmente */
-  }
-  .contenedor3{
-    background-color: white;
-    text-align: center;
-  }
-  .hijos4 img{
-    width: 75%;
-  }
-  .contenedor4{
-    background-color: white;
-    text-align: center;
-  }
-  .hijos5{
-    margin: 0 auto; 
-  }
-  .contenedor5{
-    background-color: white;
-    text-align: center;
-  }
+
+/* ====== CARRUSEL ====== */
+.carousel-caption {
+  background: rgba(0, 51, 102, 0.7);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.carousel-caption a.btn {
+  background-color: #ffdd57;
+  border: none;
+  color: #003366;
+  font-weight: bold;
+}
+
+.carousel-caption a.btn:hover {
+  background-color: #ffc107;
+  color: #fff;
+}
+
+/* ====== CONTENEDORES ====== */
+h1 {
+  text-align: center;
+  color: #003366;
+  margin-bottom: 20px;
+}
+
+.contenedor2, .contenedor3, .contenedor4, .contenedor5 {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin: 20px auto;
+  max-width: 1000px;
+}
+
+.hijos3, .hijos4, .hijos5, .hijos6 {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.hijos3 img, .hijos4 img, .hijos5 iframe, .hijos6 img {
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.hijos3 img:hover, .hijos4 img:hover, .hijos6 img:hover {
+  transform: scale(1.05);
+}
+
+/* ====== FOOTER ====== */
+footer {
+  background: linear-gradient(90deg, #003366, #0055a5);
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer a {
+  color: #ffdd57;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  color: #ffc107;
+}
+
+footer img {
+  height: 60px;
+  margin-bottom: 10px;
+}
