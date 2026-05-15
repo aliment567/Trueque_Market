@@ -1,70 +1,137 @@
+/* =============================================
+   VARIABLES
+   ============================================= */
+:root {
+  --blue-deep:    #050b18;
+  --blue-mid:     #070f1e;
+  --blue-surface: #0a1426;
+  --blue-card:    #0d1b35;
+  --blue-accent:  #3b82f6;
+  --blue-light:   #7eb8f7;
+  --blue-muted:   #7a9cbf;
+  --blue-dim:     #4a6a8a;
+  --blue-border:  rgba(59, 130, 246, 0.15);
+  --text-white:   #ffffff;
+  --text-body:    #e8edf7;
+  --radius-sm:    6px;
+  --radius-md:    10px;
+  --radius-lg:    14px;
+  --transition:   0.26s ease;
+}
+
+/* =============================================
+   BASE
+   ============================================= */
 body {
   font-family: 'Roboto', sans-serif;
   background-color: var(--blue-deep);
   color: var(--text-body);
   line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Navbar */
+/* =============================================
+   NAVBAR
+   ============================================= */
 #menu {
   background-color: rgba(5, 11, 24, 0.96);
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--blue-border);
+  position: sticky;
+  top: 0;
+  z-index: 200;
 }
 .nav-link {
   color: var(--blue-light) !important;
   text-transform: uppercase;
   font-weight: 500;
+  letter-spacing: 0.05em;
   transition: all var(--transition);
 }
-.nav-link:hover { color: var(--text-white) !important; }
+.nav-link:hover {
+  color: var(--text-white) !important;
+  background-color: rgba(59,130,246,0.1);
+  border-radius: var(--radius-sm);
+}
 
-/* Carrusel */
+/* =============================================
+   CARRUSEL
+   ============================================= */
 .carousel-inner img {
   border-radius: var(--radius-md);
   border: 1px solid rgba(59,130,246,0.15);
+  box-shadow: 0 20px 60px rgba(10,30,80,0.5);
 }
 .carousel-caption .btn {
   background: var(--blue-accent);
   border: none;
   border-radius: 999px;
-  padding: 8px 20px;
-  transition: background var(--transition);
+  padding: 10px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background var(--transition), transform var(--transition);
 }
-.carousel-caption .btn:hover { background: var(--blue-light); }
+.carousel-caption .btn:hover {
+  background: var(--blue-light);
+  transform: scale(1.08);
+}
 
-/* Contenedores */
+/* =============================================
+   CONTENEDORES (TARJETAS)
+   ============================================= */
 .contenedor2, .contenedor3, .contenedor4, .contenedor5 {
   background: var(--blue-surface);
   border: 1px solid rgba(59,130,246,0.12);
   border-radius: var(--radius-md);
-  margin-top: 24px;
-  padding: 24px;
+  margin-top: 28px;
+  padding: 28px;
   text-align: center;
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 20px 60px rgba(10,30,80,0.55);
+  transition: transform var(--transition), box-shadow var(--transition);
 }
+.contenedor2:hover, .contenedor3:hover, .contenedor4:hover, .contenedor5:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 80px rgba(10,30,80,0.7);
+}
+
 .contenedor2 h1, .contenedor3 h1, .contenedor4 h1, .contenedor5 h1 {
   font-family: 'Montserrat', sans-serif;
   color: var(--text-white);
-  margin-bottom: 16px;
+  margin-bottom: 18px;
   border-bottom: 2px solid var(--blue-accent);
   display: inline-block;
   padding-bottom: 6px;
+  font-size: 1.6rem;
+  letter-spacing: -0.02em;
 }
+
 .contenedor2 img, .contenedor3 img, .contenedor5 img {
   max-width: 100%;
+  max-height: 260px;
+  object-fit: contain;
   border-radius: var(--radius-sm);
-  transition: transform 0.4s ease;
+  transition: transform 0.4s ease, filter 0.4s ease;
 }
 .contenedor2 img:hover, .contenedor3 img:hover, .contenedor5 img:hover {
   transform: scale(1.05);
-}
-.contenedor4 iframe {
-  border: 1px solid var(--blue-border);
-  border-radius: var(--radius-sm);
-  box-shadow: 0 12px 30px rgba(10,30,80,0.4);
+  filter: brightness(1.2);
 }
 
-/* Footer */
+.contenedor4 iframe {
+  width: 100%;
+  height: 320px;
+  border: 1px solid var(--blue-border);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 12px 40px rgba(10,30,80,0.45);
+}
+
+/* =============================================
+   FOOTER
+   ============================================= */
 footer {
   background-color: #030a14;
   border-top: 1px solid rgba(59,130,246,0.1);
@@ -79,5 +146,25 @@ footer .hijos img:hover { filter: brightness(1) saturate(1); }
 footer a {
   color: var(--blue-light);
   text-decoration: none;
+  font-weight: 500;
 }
 footer a:hover { color: var(--text-white); }
+
+/* =============================================
+   RESPONSIVE
+   ============================================= */
+@media (max-width: 992px) {
+  .contenedor2, .contenedor3, .contenedor4, .contenedor5 {
+    min-height: 360px;
+    padding: 20px;
+  }
+  .contenedor2 h1, .contenedor3 h1, .contenedor4 h1, .contenedor5 h1 {
+    font-size: 1.3rem;
+  }
+  .contenedor2 img, .contenedor3 img, .contenedor5 img {
+    max-height: 200px;
+  }
+  .contenedor4 iframe {
+    height: 260px;
+  }
+}
