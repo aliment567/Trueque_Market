@@ -456,9 +456,6 @@ footer {
 /* =============================================
    ANIMACIONES DE REVEAL (con AOS o JS)
    ============================================= */
-[data-aos] {
-  /* AOS maneja esto automáticamente, aquí solo ayudamos */
-}
 
 /* Delay en cascada para las cards de la sección Acerca */
 .acerca .col-md-4:nth-child(2) { transition-delay: 0.1s; }
