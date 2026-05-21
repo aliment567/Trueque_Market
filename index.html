@@ -4,58 +4,29 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Inicio | Trueque Market</title>
-
-  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <!-- AOS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;700;900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-  <!-- CSS -->
   <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
 
-<!-- ===== NAVBAR ===== -->
 <nav class="navbar navbar-expand-lg" id="menu">
   <div class="container-fluid px-4">
-
     <a class="navbar-brand" href="#">
       <img src="img/Logo tm.png" height="48" alt="Logo Trueque Market">
     </a>
-
-    <button class="navbar-toggler border-0" type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNavDropdown"
-      aria-controls="navbarNavDropdown"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-      style="color: #7eb8f7;">
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarNavDropdown" style="color:#7eb8f7;">
       <i class="fas fa-bars"></i>
     </button>
-
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
-
-        <li class="nav-item">
-          <a class="nav-link active" href="index.html">
-            <i class="fas fa-home me-1"></i>Inicio
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="participantes.html">
-            <i class="fas fa-users me-1"></i>Participantes
-          </a>
-        </li>
-
+        <li class="nav-item"><a class="nav-link active" href="index.html"><i class="fas fa-home me-1"></i>Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="participantes.html"><i class="fas fa-users me-1"></i>Participantes</a></li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#"
-            id="navbarDropdown" role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
             <i class="fas fa-layer-group me-1"></i>Semestre
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -67,108 +38,91 @@
             <li><a class="dropdown-item" href="#">Semestre 6</a></li>
           </ul>
         </li>
-
       </ul>
     </div>
-
   </div>
 </nav>
 
-<!-- ===== HERO ===== -->
-<section class="hero-wrap d-flex align-items-center justify-content-center text-center" data-aos="fade-up">
-  <div class="hero-inner">
-    <div class="hero-badge">
-      <i class="fas fa-circle fa-xs"></i>
-      Plataforma de Intercambio
+<!-- HERO -->
+<section class="hero-section">
+  <div class="hero-bg-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-content" data-aos="fade-up">
+    <div class="hero-badge"><i class="fas fa-circle"></i> Proyecto Universitario</div>
+    <h1>TRUEQUE<br><span>MARKET</span></h1>
+    <p>Plataforma de intercambio de conocimientos y objetos que fomenta la colaboración, la comunidad y el trueque justo entre personas.</p>
+    <div class="hero-actions">
+      <a href="participantes.html" class="btn-primary-hero"><i class="fas fa-users"></i> Equipo</a>
+      <a href="semestre_4.html" class="btn-outline-hero"><i class="fas fa-layer-group"></i> Semestres</a>
     </div>
-    <h1>TRUEQUE<span> MARKET</span></h1>
-    <p>
-      Nuestra plataforma permite a los usuarios realizar trueques de conocimientos y objetos,
-      fomentando la creación de comunidades y el intercambio justo.
-    </p>
-    <div class="hero-btns">
-      <a href="participantes.html" class="btn-hero-primary">
-        <i class="fas fa-users"></i> Conoce el Equipo
-      </a>
-      <a href="semestre_4.html" class="btn-hero-outline">
-        <i class="fas fa-layer-group"></i> Ver Semestres
-      </a>
+  </div>
+  <div class="hero-scroll"><i class="fas fa-chevron-down"></i></div>
+</section>
+
+<!-- ACERCA -->
+<section class="page-section" data-aos="fade-up">
+  <div class="section-label-top">Sobre nosotros</div>
+  <h2 class="section-title">Acerca del Proyecto</h2>
+  <p class="section-subtitle">Una plataforma diseñada para conectar personas a través del intercambio justo.</p>
+  <div class="cards-3">
+    <div class="feature-card" data-aos="fade-up" data-aos-delay="0">
+      <div class="feature-card-icon"><i class="fas fa-shield-alt"></i></div>
+      <div class="feature-card-line"></div>
+      <h4>Intercambio Seguro</h4>
+      <p>Protección y confianza en cada transacción dentro de la plataforma.</p>
+    </div>
+    <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+      <div class="feature-card-icon"><i class="fas fa-users"></i></div>
+      <div class="feature-card-line"></div>
+      <h4>Comunidad Activa</h4>
+      <p>Conecta con otros usuarios y fomenta la colaboración y el aprendizaje.</p>
+    </div>
+    <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+      <div class="feature-card-icon"><i class="fas fa-handshake"></i></div>
+      <div class="feature-card-line"></div>
+      <h4>Trueques Justos</h4>
+      <p>Garantizamos intercambios equitativos y beneficiosos para todos.</p>
     </div>
   </div>
 </section>
 
-<!-- ===== ACERCA ===== -->
-<section class="acerca-wrap" data-aos="fade-up">
-  <div class="sec-wrap">
-    <div class="card-section">
-      <div class="section-header">
-        <div class="section-icon"><i class="fas fa-info-circle"></i></div>
-        <h2>Acerca del Proyecto</h2>
-      </div>
-      <div class="benefit-grid">
-
-        <div class="benefit-card">
-          <div class="benefit-icon"><i class="fas fa-shield-alt"></i></div>
-          <h5>Intercambio Seguro</h5>
-          <p>Protección y confianza en cada transacción dentro de la plataforma.</p>
-        </div>
-
-        <div class="benefit-card">
-          <div class="benefit-icon"><i class="fas fa-users"></i></div>
-          <h5>Comunidad Activa</h5>
-          <p>Conecta con otros usuarios y fomenta la colaboración y el aprendizaje.</p>
-        </div>
-
-        <div class="benefit-card">
-          <div class="benefit-icon"><i class="fas fa-handshake"></i></div>
-          <h5>Trueques Justos</h5>
-          <p>Garantizamos intercambios equitativos y beneficiosos para todos.</p>
-        </div>
-
+<!-- CÓMO FUNCIONA -->
+<section class="page-section section-alt" data-aos="fade-up">
+  <div class="section-label-top">Proceso</div>
+  <h2 class="section-title">Cómo Funciona</h2>
+  <p class="section-subtitle">Tres pasos simples para empezar a intercambiar en la plataforma.</p>
+  <div class="steps-row">
+    <div class="step-item" data-aos="fade-up" data-aos-delay="0">
+      <div class="step-num">01</div>
+      <div class="step-connector"></div>
+      <div class="step-body">
+        <h4>Registro</h4>
+        <p>Crea tu cuenta de manera rápida y segura para empezar a usar la plataforma.</p>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- ===== CÓMO FUNCIONA ===== -->
-<section class="como-wrap" data-aos="fade-up">
-  <div class="sec-wrap">
-    <div class="card-section">
-      <div class="section-header">
-        <div class="section-icon"><i class="fas fa-cogs"></i></div>
-        <h2>Cómo Funciona</h2>
+    <div class="step-item" data-aos="fade-up" data-aos-delay="100">
+      <div class="step-num">02</div>
+      <div class="step-connector"></div>
+      <div class="step-body">
+        <h4>Publicar</h4>
+        <p>Publica los objetos o conocimientos que deseas intercambiar con otros usuarios.</p>
       </div>
-      <div class="steps-grid">
-
-        <div class="step-card">
-          <div class="step-number">1</div>
-          <h5>Registro</h5>
-          <p>Crea tu cuenta de manera rápida y segura para empezar a usar la plataforma.</p>
-        </div>
-
-        <div class="step-card">
-          <div class="step-number">2</div>
-          <h5>Publicar</h5>
-          <p>Publica los objetos o conocimientos que deseas intercambiar con otros usuarios.</p>
-        </div>
-
-        <div class="step-card">
-          <div class="step-number">3</div>
-          <h5>Concretar Trueque</h5>
-          <p>Contacta con otros usuarios y realiza trueques justos y beneficiosos.</p>
-        </div>
-
+    </div>
+    <div class="step-item" data-aos="fade-up" data-aos-delay="200">
+      <div class="step-num">03</div>
+      <div class="step-connector last"></div>
+      <div class="step-body">
+        <h4>Concretar Trueque</h4>
+        <p>Contacta con otros usuarios y realiza trueques justos y beneficiosos.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== FOOTER ===== -->
+<!-- FOOTER -->
 <footer>
   <div class="pie">
-    <div class="hijos">
-      <img src="img/logoUSBBOG.png" alt="Logo USB Bogotá">
-    </div>
+    <div class="hijos"><img src="img/logoUSBBOG.png" alt="USB"></div>
     <div class="hijos">
       <a href="https://www.usbbog.edu.co/" target="_blank">Universidad San Buenaventura</a>
       <div class="hijo">© 2026 Trueque Market</div>
@@ -176,12 +130,8 @@
   </div>
 </footer>
 
-<!-- ===== SCRIPTS ===== -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init({ duration: 900, once: true, easing: 'ease-out-cubic' });
-</script>
-
+<script>AOS.init({ duration: 900, once: true, easing: 'ease-out-cubic' });</script>
 </body>
 </html>
